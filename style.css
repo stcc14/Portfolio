@@ -1,19 +1,29 @@
 /* style.css */
 
-* {
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --section-shadow: rgba(0, 0, 0, 0.1);
+  
+
+  
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
   }
   
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   header {
@@ -21,20 +31,119 @@
     margin-bottom: 30px;
   }
   
+
+  
   header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #4e54c8;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden; /* Ensures letters won't overlap */
+    position: relative;
   }
+  
+  /* Keyframe animation for sliding in from the left */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  header h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards;
+    margin-right: 2px;
+  }
+  
+  /* Staggering the animation for each letter */
+  header h1 span:nth-child(1) { animation-delay: 0.1s; }
+  header h1 span:nth-child(2) { animation-delay: 0.2s; }
+  header h1 span:nth-child(3) { animation-delay: 0.3s; }
+  header h1 span:nth-child(4) { animation-delay: 0.4s; }
+  header h1 span:nth-child(5) { animation-delay: 0.5s; }
+  header h1 span:nth-child(6) { animation-delay: 0.6s; }
+  header h1 span:nth-child(7) { animation-delay: 0.7s; }
+  header h1 span:nth-child(8) { animation-delay: 0.8s; }
+  header h1 span:nth-child(9) { animation-delay: 0.9s; }
+  header h1 span:nth-child(10) { animation-delay: 1s; }
+  
+  /* Optional: Add smooth scaling when hovered */
+  header h1:hover span {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Styling for the contact info */
+  header p.contact-info {
+    font-size: 1rem;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+  }
+  
+  header p.contact-info:hover {
+    font-size: 1.2rem;
+    transform: scale(1.05);
+  }  
   
   header p {
     margin-top: 10px;
     font-size: 1rem;
   }
+
+  header p.contact-info {
+    font-size: 1rem;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+  }
+  
+  header p.contact-info:hover {
+    font-size: 1.2rem;  /* Enlarges the text */
+    transform: scale(1.05);  /* Optional: makes it slightly bigger with a smooth effect */
+  }
+  
   
   header a {
     color: #4e54c8;
     text-decoration: none;
     margin: 0 8px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .nav-buttons a {
+    background-color: #4e54c8;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-buttons a:hover {
+    background-color: #3b42a1;
+  }
+  
+  .toggle-button {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 8px 16px;
+    background-color: #4e54c8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
   }
   
   .education {
@@ -61,7 +170,19 @@
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--section-shadow);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  main section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px var(--section-shadow);
+    outline: none;  /* Ensures no outline appears on hover */
+  }
+
+  header, .nav-buttons a {
+    outline: none;  /* Remove any default outlines from these elements too */
   }
   
   main h2 {
@@ -80,6 +201,7 @@
   ul li {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
+    border-left: none;
   }
   
   .icons {
