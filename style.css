@@ -79,16 +79,21 @@
     transition: transform 0.2s ease;
   }
   
-  /* Styling for the contact info */
-  header p.contact-info {
-    font-size: 1rem;
-    transition: font-size 0.3s ease, transform 0.3s ease;
-  }
-  
-  header p.contact-info:hover {
-    font-size: 1.2rem;
-    transform: scale(1.05);
-  }  
+  //* Styling for the contact info */
+header p.contact-info {
+  font-size: 1rem;
+  transition: font-size 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Ensure it behaves like an inline element without affecting layout */
+  padding: 0;
+}
+
+header p.contact-info:hover {
+  font-size: 1.2rem;
+  transform: scale(1.05);
+  transform-origin: center; /* Keep the scaling smooth and centered */
+  /* Add a smooth transition for the transform property */
+  transition: font-size 0.3s ease, transform 0.3s ease;
+} 
   
   header p {
     margin-top: 10px;
