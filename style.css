@@ -79,20 +79,15 @@
     transition: transform 0.2s ease;
   }
   
-  //* Styling for the contact info */
-header p.contact-info {
+ /* Styling for the contact info */
+ header p.contact-info {
   font-size: 1rem;
   transition: font-size 0.3s ease, transform 0.3s ease;
-  display: inline-block; /* Ensure it behaves like an inline element without affecting layout */
-  padding: 0;
 }
 
 header p.contact-info:hover {
   font-size: 1.2rem;
   transform: scale(1.05);
-  transform-origin: center; /* Keep the scaling smooth and centered */
-  /* Add a smooth transition for the transform property */
-  transition: font-size 0.3s ease, transform 0.3s ease;
 } 
   
   header p {
@@ -236,24 +231,4 @@ footer {
   overflow: hidden; /* Hide the overflowing text */
 }
 
-.marquee {
-  display: flex;
-  animation: scrollLeft 15s linear infinite; /* Adjust the speed as needed */
-}
 
-.marquee p {
-  white-space: nowrap; /* Prevent text from wrapping */
-  margin: 0;
-  padding: 0 2rem;
-  font-size: 1.2rem;
-}
-
-/* Keyframe animation for scrolling the text */
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(100%); /* Start off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* Move off-screen to the left */
-  }
-}
