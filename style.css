@@ -226,3 +226,34 @@ header p.contact-info:hover {
     color: #777;
   }
   
+ /* Styling for the marquee container */
+footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden; /* Hide the overflowing text */
+}
+
+.marquee {
+  display: flex;
+  animation: scrollLeft 15s linear infinite; /* Adjust the speed as needed */
+}
+
+.marquee p {
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin: 0;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+
+/* Keyframe animation for scrolling the text */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+}
