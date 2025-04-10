@@ -1,0 +1,101 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #4e54c8;
+  }
+  
+  header p {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  header a {
+    color: #4e54c8;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  .education {
+    background-color: #e0f7fa;
+  }
+  
+  .experience {
+    background-color: #f1f8e9;
+  }
+  
+  .extracurricular {
+    background-color: #fce4ec;
+  }
+  
+  .projects {
+    background-color: #fff3e0;
+  }
+  
+  .skills {
+    background-color: #ede7f6;
+  }
+  
+  main section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  main h2 {
+    color: #4e54c8;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .icons {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .icons i {
+    margin-right: 10px;
+    color: #4e54c8;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    color: #777;
+  }
+  
